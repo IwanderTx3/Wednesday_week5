@@ -5,13 +5,11 @@ fetch('http://www.omdbapi.com/?s=Star%20Wars&apikey=48de7243')
     .then(function(response){return response.json()})
     .then(function(json)
     {   
-      
-            json.Search.forEach(function(movie)
+        json.Search.forEach(function(movie)
             {
                 let movieTitle=movie.Title
                 let movieRelease=movie.Year
                 let movieId=movie.imdbID
-                
                 let li = $("<li>").addClass("displayList").attr("id","accordion");
                 let itemTitle= $("<title>").addClass("textForm")
                 itemTitle.html(movieTitle)
@@ -21,7 +19,6 @@ fetch('http://www.omdbapi.com/?s=Star%20Wars&apikey=48de7243')
                 itemTitle.append(releaseDate)
                 movieList.append(li)
                 let movieUrl="http://www.omdbapi.com/?i="+movieId+"&apikey="+API_KEY
-//                console.log(movieUrl)
                 fetch(movieUrl)
                 .then(function(response){return response.json()})
                 .then(function(filmList)
@@ -55,7 +52,7 @@ fetch('http://www.omdbapi.com/?s=Star%20Wars&apikey=48de7243')
                         fullDetails.append("<li> <br>   </li>")
                         fullDetails.append("<li> Plot Summary: "+filmList.Plot+"</li>")
                         li.append(details)
-                                       })
+                        })
             })
 
 

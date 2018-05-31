@@ -1,11 +1,6 @@
 body{
-    
     background-image: url("stars2.jpg");
     background-color: black;
-}
-
-::placeholder{
-    padding-left:10%;
 }
 
 h3 {
@@ -13,6 +8,7 @@ h3 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #FFF421;
     text-align: center;
+    margin: auto auto 20px auto;
 }
 
 .displayList {
@@ -23,7 +19,7 @@ h3 {
     background-color: rgb(182, 206, 206);
     color:rgb(227, 216, 7);
     border-width: 5px;
-    border-style: outset;
+    border-style: groove;
     border-color: rgb(245, 234, 25);
     margin:auto auto 20px auto;
     font-size: 24px;
@@ -45,6 +41,7 @@ h3 {
     flex-direction: row;
     margin: 0;
     font-size: 18px;
+    outline: 0;
 }
 
 .displayList .info h5{
@@ -84,14 +81,18 @@ h3 {
     flex-direction: row;
 }
 
-displayList .box .image {
-    width: 100px;
-    height: 100px;
-    border-style: outset;
+.image{
+    margin: 5 5 5 10;
+    border-style: groove; 
+    border-color: #FFF421;
+    border-width: 20px;
 }
+
+
 
 .displayList .info ul{
     color:black;
+    margin: auto 15 auto 5;
     
 }
 
